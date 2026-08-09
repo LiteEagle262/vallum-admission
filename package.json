@@ -30,7 +30,7 @@
     "postpack": "node ../../scripts/cleanup-package-license.mjs ."
   },
   "devDependencies": {
-    "@types/node": "^24.0.0"
+    "@types/node": "^26.1.2"
   },
   "publishConfig": { "access": "public", "provenance": true }
 }
