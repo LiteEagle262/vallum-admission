@@ -1,0 +1,36 @@
+{
+  "name": "@vallum/admission",
+  "version": "0.1.0",
+  "description": "Server-side admission grant issuer for Vallum browser sessions",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vallum-proxy/vallum.git",
+    "directory": "packages/vallum-admission"
+  },
+  "homepage": "https://github.com/vallum-proxy/vallum#readme",
+  "bugs": "https://github.com/vallum-proxy/vallum/issues",
+  "keywords": ["vallum", "admission", "browser", "security", "sdk"],
+  "sideEffects": ["./dist/browser.js"],
+  "files": ["dist", "README.md"],
+  "engines": { "node": ">=20" },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/browser.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build && node ../../scripts/prepare-package-license.mjs .",
+    "postpack": "node ../../scripts/cleanup-package-license.mjs ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0"
+  },
+  "publishConfig": { "access": "public", "provenance": true }
+}
