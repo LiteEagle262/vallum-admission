@@ -11,6 +11,11 @@ misconfigured frontend build cannot silently bundle the Node signing path.
 npm install @liteeagle226/admission
 ```
 
+This package is the server-side companion to the browser runtime. Pair it with
+`@liteeagle226/client` or one of the React, Vue, Svelte, Angular, or zero-build
+browser packages. Next.js applications can instead use the wrapper exported by
+`@liteeagle226/nextjs/server`, which depends on this package.
+
 The framework-neutral handler uses the standard Fetch API on Node.js, so it can
 be used by Next.js, Remix, SvelteKit, Nuxt/Nitro, or any Node server framework
 that can translate a request to `Request` and a response from `Response`:
