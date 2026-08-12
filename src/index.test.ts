@@ -32,7 +32,7 @@ function request(body: unknown = requestBody, headers: HeadersInit = {}): Reques
   });
 }
 
-describe("@vallum/admission", () => {
+describe("@liteeagle226/admission", () => {
   it("fails fast when a browser build resolves the server package", async () => {
     await expect(import("./browser.js")).rejects.toThrow("server-only");
   });

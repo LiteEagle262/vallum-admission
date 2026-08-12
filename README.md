@@ -1,4 +1,4 @@
-# `@vallum/admission`
+# `@liteeagle226/admission`
 
 Node-side admission grant issuer for the Vallum browser SDK. This package must
 only be imported by a trusted application backend. It contains the Ed25519
@@ -8,7 +8,7 @@ The export map resolves to a fail-fast stub under the `browser` condition so a
 misconfigured frontend build cannot silently bundle the Node signing path.
 
 ```sh
-npm install @vallum/admission
+npm install @liteeagle226/admission
 ```
 
 The framework-neutral handler uses the standard Fetch API on Node.js, so it can
@@ -19,7 +19,7 @@ that can translate a request to `Request` and a response from `Response`:
 import {
   admissionConfiguration,
   createVallumAdmissionHandler,
-} from "@vallum/admission";
+} from "@liteeagle226/admission";
 
 export const issueAdmission = createVallumAdmissionHandler({
   configuration: () => admissionConfiguration(),

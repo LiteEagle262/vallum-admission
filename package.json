@@ -1,5 +1,5 @@
 {
-  "name": "@vallum/admission",
+  "name": "@liteeagle226/admission",
   "version": "0.1.0",
   "description": "Server-side admission grant issuer for Vallum browser sessions",
   "type": "module",
